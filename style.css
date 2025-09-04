@@ -1,0 +1,12 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+.header {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 50px;
+}
