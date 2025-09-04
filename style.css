@@ -9,4 +9,5 @@
     display: inline-flex;
     justify-content: space-between;
     gap: 50px;
+    background-image: linear-gradient(#042326, #0F5959);
 }
