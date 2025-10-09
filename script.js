@@ -35,6 +35,13 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
+  if (atual >= perguntas.lenght){
+    mostraResultado();
+    return;
+  }
+}
+
+function mostraPergunta() {
   if (atual >= perguntas[atual]) {
     mostraResultado();
     return;
