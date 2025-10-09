@@ -7,12 +7,18 @@
 
 .header {
     width: 1920px;
+    height: 151px;
     display: inline-flex;
     justify-content: space-between;
     gap: 50px;
     background-color: #042326;
     color: #fff;
     margin-bottom: 93px;
+}
+
+.header h1 {
+  font-family: "Lexend Tera", sans-serif;
+  width: 64px;
 }
 
 .menu-options {
