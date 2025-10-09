@@ -6,10 +6,13 @@
 /* Header */
 
 .header {
+    width: 1920px;
     display: inline-flex;
     justify-content: space-between;
     gap: 50px;
     background-color: #042326;
+    color: #fff;
+    margin-bottom: 93px;
 }
 
 .menu-options {
