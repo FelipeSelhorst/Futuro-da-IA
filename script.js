@@ -4,73 +4,64 @@ const aBox = document.querySelector(".A-box");
 const rBox = document.querySelector(".R-box");
 const rText = document.querySelector(".R-text");
 
-const lista = [item1, item2]
-
 const Perguntas = [
   {
-    enunciado: "Pergunta 1",
+    enunciado: "No futuro, a IA poderá compreender emoções humanas com precisão e reagir de forma empática em tempo real.",
     alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      { texto: "Verdadeiro", afirmacao: "Você escolheu Verdadeiro!" },
+      { texto: "Falso", afirmacao: "Você escolheu Falso!" }
     ]
   },
   {
-    enunciado: "Pergunta 2",
+    enunciado: "O desenvolvimento de IA responsável e regulamentada será essencial para garantir que seus avanços beneficiem a sociedade de forma ética e segura.",
     alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      { texto: "Verdadeiro", afirmacao: "Você escolheu Verdadeiro!" },
+      { texto: "Falso", afirmacao: "Você escolheu Falso!" }
     ]
   },
   {
-    enunciado: "Pergunta 3",
+    enunciado: "Pergunta 3A automação impulsionada por IA eliminará completamente a necessidade de trabalhadores humanos em todos os setores.",
     alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      { texto: "Verdadeiro", afirmacao: "Você escolheu Verdadeiro!" },
+      { texto: "Falso", afirmacao: "Você escolheu Falso!" }
     ]
   },
-]
+];
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
-  if (atual >= perguntas.lenght){
-    mostraResultado();
-    return;
-  }
-}
-
-function mostraPergunta() {
-  if (atual >= perguntas[atual]) {
-    mostraResultado();
+  if (atual >= Perguntas.length) {
+    mostraResposta();
     return;
   }
   perguntaAtual = Perguntas[atual];
-  caixaPerguntas.textContent = perguntaAtual.enunciado;
+  qBox.textContent = perguntaAtual.enunciado;
+  aBox.innerHTML = "";
   mostraAlternativas();
 }
 
 function mostraAlternativas() {
   for (const alternativa of perguntaAtual.alternativas) {
-    const botaoAlternativas = document.createElement("button");
-    botaoAlternativas.textContent = alternativas;
-    botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-    caixaAlternativas.appendChild(botaoAlternativas);
+    const botaoAlternativa = document.createElement("button");
+    botaoAlternativa.textContent = alternativa.texto;
+    botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
+    aBox.appendChild(botaoAlternativa);
   }
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-  const afirmacoes = opcaoSelecionada.afirmacoes;
-  historiaFinal = afirmacoes;
+  historiaFinal = opcaoSelecionada.afirmacao;
   atual++;
   mostraPergunta();
 }
 
 function mostraResposta() {
-  caixaPerguntas.textContent = "conteudo";
-  textoResultado.textContent = historiaFinal;
-  caixaAlternativas.textContent = "";
+  qBox.textContent = "Resultado Final";
+  rText.textContent = historiaFinal;
+  aBox.innerHTML = "";
 }
 
 mostraPergunta();
