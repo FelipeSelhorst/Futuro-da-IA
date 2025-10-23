@@ -59,7 +59,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResposta() {
-  qBox.textContent = "Resultado Final";
+  qBox.textContent = "Quiz concluído!";
   rText.textContent = historiaFinal;
   aBox.innerHTML = "";
 }
