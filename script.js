@@ -8,22 +8,22 @@ const Perguntas = [
   {
     enunciado: "No futuro, a IA poderá compreender emoções humanas com precisão e reagir de forma empática em tempo real.",
     alternativas: [
-      { texto: "Verdadeiro", afirmacao: "Você escolheu Verdadeiro!" },
-      { texto: "Falso", afirmacao: "Você escolheu Falso!" }
+      { texto: "Verdadeiro" },
+      { texto: "Falso" }
     ]
   },
   {
     enunciado: "O desenvolvimento de IA responsável e regulamentada será essencial para garantir que seus avanços beneficiem a sociedade de forma ética e segura.",
     alternativas: [
-      { texto: "Verdadeiro", afirmacao: "Você escolheu Verdadeiro!" },
-      { texto: "Falso", afirmacao: "Você escolheu Falso!" }
+      { texto: "Verdadeiro" },
+      { texto: "Falso" }
     ]
   },
   {
     enunciado: "Pergunta 3A automação impulsionada por IA eliminará completamente a necessidade de trabalhadores humanos em todos os setores.",
     alternativas: [
-      { texto: "Verdadeiro", afirmacao: "Você escolheu Verdadeiro!" },
-      { texto: "Falso", afirmacao: "Você escolheu Falso!" }
+      { texto: "Verdadeiro" },
+      { texto: "Falso" }
     ]
   },
 ];
